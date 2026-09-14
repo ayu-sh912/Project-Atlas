@@ -1,0 +1,24 @@
+{
+  "name": "project-atlas",
+  "version": "1.0.0",
+  "description": "ATLAS is a campus-specific pedestrian navigation platform designed to provide accurate navigation and contextual information within a university campus.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayu-sh912/Project-Atlas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ayu-sh912/Project-Atlas/issues"
+  },
+  "homepage": "https://github.com/ayu-sh912/Project-Atlas#readme"
+}

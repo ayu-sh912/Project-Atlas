@@ -1,0 +1,32 @@
+[
+  {
+    "id": "n1",
+    "latitude": 27.4915,
+    "longitude": 77.6725,
+    "name": "Main Gate"
+  },
+  {
+    "id": "n2",
+    "latitude": 27.4920,
+    "longitude": 77.6730,
+    "name": "Campus Junction 1"
+  },
+  {
+    "id": "n3",
+    "latitude": 27.4925,
+    "longitude": 77.6735,
+    "name": "AB-2 Junction"
+  },
+  {
+    "id": "n4",
+    "latitude": 27.4929,
+    "longitude": 77.6739,
+    "name": "AB-3 Entrance"
+  },
+  {
+    "id": "n5",
+    "latitude": 27.4927,
+    "longitude": 77.6742,
+    "name": "Library Junction"
+  }
+]

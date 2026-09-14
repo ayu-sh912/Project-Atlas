@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ab1",
+    "name": "AB-1",
+    "type": "academic_block",
+    "latitude": 27.4921,
+    "longitude": 77.6731
+  },
+  {
+    "id": "ab2",
+    "name": "AB-2",
+    "type": "academic_block",
+    "latitude": 27.4925,
+    "longitude": 77.6735
+  },
+  {
+    "id": "ab3",
+    "name": "AB-3",
+    "type": "academic_block",
+    "latitude": 27.4929,
+    "longitude": 77.6739
+  }
+]
