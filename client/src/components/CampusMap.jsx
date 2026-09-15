@@ -1,4 +1,11 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  useMap,
+} from 'react-leaflet';
+
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -14,8 +21,34 @@ const DefaultIcon = L.icon({
 
 L.Marker.prototype.options.icon = DefaultIcon;
 
-function CampusMap({ buildings = [] }) {
+function MapController({ selectedLocation }) {
+  const map = useMap();
+
+  if (selectedLocation) {
+    map.flyTo(
+      [selectedLocation.latitude, selectedLocation.longitude],
+      18,
+      {
+        duration: 1,
+      }
+    );
+  }
+
+  return null;
+}
+
+function CampusMap({
+  buildings = [],
+  facilities = [],
+  selectedLocation,
+  onSelectLocation,
+}) {
   const center = [27.4925, 77.6735];
+
+  const locations = [
+    ...buildings,
+    ...facilities,
+  ];
 
   return (
     <MapContainer
@@ -24,19 +57,27 @@ function CampusMap({ buildings = [] }) {
       className="h-[600px] w-full rounded-xl"
     >
       <TileLayer
-        attribution='&copy; OpenStreetMap contributors'
+        attribution="&copy; OpenStreetMap contributors"
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      {buildings.map((building) => (
+      <MapController selectedLocation={selectedLocation} />
+
+      {locations.map((location) => (
         <Marker
-          key={building._id}
-          position={[building.latitude, building.longitude]}
+          key={location._id}
+          position={[
+            location.latitude,
+            location.longitude,
+          ]}
+          eventHandlers={{
+            click: () => onSelectLocation(location),
+          }}
         >
           <Popup>
-            <strong>{building.name}</strong>
+            <strong>{location.name}</strong>
             <br />
-            {building.type}
+            {location.type}
           </Popup>
         </Marker>
       ))}

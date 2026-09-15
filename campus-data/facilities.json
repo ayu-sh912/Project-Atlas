@@ -1,16 +1,17 @@
 [
   {
+    "id": "central-library",
+    "name": "Central Library",
+    "type": "library",
+    "parentBuilding": "ab1",
+    "latitude": 27.60580870809193,
+    "longitude": 77.59338457171258
+  },
+  {
     "id": "main-gate",
     "name": "Main Gate",
     "type": "entrance",
-    "latitude": 27.4915,
-    "longitude": 77.6725
-  },
-  {
-    "id": "library",
-    "name": "Central Library",
-    "type": "library",
-    "latitude": 27.4927,
-    "longitude": 77.6742
+    "latitude": 27.605082072651534,
+    "longitude": 77.59232084786852
   }
 ]

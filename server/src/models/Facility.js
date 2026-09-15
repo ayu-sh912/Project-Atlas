@@ -14,6 +14,12 @@ const facilitySchema = new mongoose.Schema(
       trim: true,
     },
 
+    parentBuilding: {
+      type: String,
+      trim: true,
+      default: null,
+    },
+
     latitude: {
       type: Number,
       required: true,
