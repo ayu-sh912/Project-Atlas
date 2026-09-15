@@ -1,14 +1,20 @@
 const express = require('express');
+const cors = require('cors');
+
+const locationRoutes = require('./routes/locationRoutes');
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 app.get('/api/health', (req, res) => {
   res.json({
     success: true,
-    message: 'ATLAS API is running'
+    message: 'ATLAS API is running',
   });
 });
+
+app.use('/api/locations', locationRoutes);
 
 module.exports = app;
